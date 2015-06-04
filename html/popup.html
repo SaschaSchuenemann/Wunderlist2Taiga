@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Wunderlist2Taiga</title>
+    <link rel="stylesheet" href="../styles/popup.css"/>
+  </head>
+  <body>
+    <div class="header"></div>
+
+    <div id="w2t-login-form" class="view">
+      <p class="login-row">
+        <label for="w2t-username">User Name:</label>
+        <input name="w2t-username" type="text" id="w2t-username" class="text-input" value="">
+      </p>
+      <p class="form-row">
+        <label for="w2t-password">Password:</label>
+        <input class="text-input" id="w2t-password" name="password">
+      </p>
+      <p class="form-submit-row">
+        <input type="button" value="Login" id="w2t-login-button" class="btn-small left btn hide-btn">
+        <input type="button" value="Cancel" id="w2t-cancel-button" class="btn-small right update-btn">
+      </p>
+    </div>
+    <script src="../lib/jquery-2.1.1.min.js"></script>
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

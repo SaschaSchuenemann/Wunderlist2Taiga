@@ -1,0 +1,39 @@
+{
+  "name": "Wunderlist 2 Taiga Button",
+  "short_name": "Wunderlist2Taiga",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Extension for linking wunderlist entries with taiga issues / user stories",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/inactive-19.png",
+      "38": "images/inactive-38.png"
+    },
+    "default_popup": "html/popup.html",
+    "default_title": "Wunderlist 2 Taiga"
+  },
+  "permissions": [
+    "tabs",
+    "*://*.wunderlist.com/*",
+    "*://*.taiga.io/*"
+  ],
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+    "*://*.wunderlist.com/*"
+      ],
+      "css": ["styles/style.css"],
+      "js": ["lib/jquery-2.1.1.min.js","lib/json2.js","scripts/button.js"]
+    }
+  ]
+}
